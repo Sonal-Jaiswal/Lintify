@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { inject } from '@vercel/speed-insights'; // Import Vercel Speed Insights
+// import { inject } from '@vercel/speed-insights'; // Import Vercel Speed Insights
 import { Upload, FileCode, FileDown, AlertCircle, Loader2, Code2 } from 'lucide-react';
 import { formatCode } from './utils/formatter';
 import { generateReadme } from './utils/readme-generator';
@@ -14,9 +14,9 @@ function App() {
     error?: string;
   } | null>(null);
 
-  useEffect(() => {
-    inject(); // This will inject the script when the component mounts
-  }, []);
+  // useEffect(() => {
+  //   inject(); // This will inject the script when the component mounts
+  // }, []);
 
   const handleDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
